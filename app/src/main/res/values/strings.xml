@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zhegalkin polynomial</string>
+    <string name="hint">Type in function result...</string>
+</resources>

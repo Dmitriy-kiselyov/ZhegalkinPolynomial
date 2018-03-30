@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/main_layout"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/background">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" android:id="@+id/linearLayout">
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:id="@+id/binary_big" android:gravity="center"
+                android:textSize="@dimen/hint_size"
+                android:singleLine="true" android:ellipsize="start"
+                android:hint="@string/hint"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/binary_small" android:gravity="center" android:textSize="15dp"
+                android:textColor="@color/black"/>
+    </LinearLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" android:layout_marginBottom="10dp" android:id="@+id/relativeLayout"
+            android:layout_below="@+id/linearLayout">
+        <Button
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="0"
+                android:id="@+id/zero_button" android:textSize="75dp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true" android:layout_alignParentLeft="true"/>
+        <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fadeScrollbars="false"
+                android:id="@+id/scrollView"
+                android:fillViewport="true"
+                android:layout_toLeftOf="@+id/one_button" android:layout_toRightOf="@+id/zero_button"
+                android:layout_alignParentTop="true" android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp" android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+            <com.pussy_penetrator.descretemath.zhegalkinpolinomial.PolinomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="(*^‿^*)"
+                    android:id="@+id/polinom" android:layout_below="@+id/linearLayout"
+                    android:layout_above="@+id/relativeLayout" android:layout_alignParentRight="true"
+                    android:layout_alignParentLeft="true" android:textSize="80dp"
+                    android:singleLine="false" android:textColor="@color/black"
+                    android:gravity="center"/>
+        </ScrollView>
+        <Button
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="1"
+                android:textColor="@color/black"
+                android:id="@+id/one_button"
+                android:textSize="75dp"
+                android:layout_alignTop="@+id/zero_button" android:layout_alignParentRight="true"/>
+        <ImageButton
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="56dp"
+                android:layout_height="31dp"
+                android:id="@+id/erase_button"
+                android:background="@drawable/erase_background"
+                android:layout_marginRight="3dp"
+                android:layout_below="@+id/one_button" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</RelativeLayout>
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="hint_size">54dp</dimen>
+    <dimen name="binary_size">70dp</dimen>
+    <dimen name="polinom_size">70dp</dimen>
+</resources>

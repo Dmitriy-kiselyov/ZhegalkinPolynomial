@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/main_layout"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/background">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" android:id="@+id/linearLayout">
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black"
+                android:id="@+id/binary_big"
+                android:gravity="center"
+                android:textSize="@dimen/hint_size"
+                android:singleLine="false"
+                android:ellipsize="start"
+                android:hint="@string/hint"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/binary_small"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="@color/black"/>
+    </LinearLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/relativeLayout">
+        <Button
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:text="0"
+                android:id="@+id/zero_button" android:textSize="150dp" android:layout_marginLeft="40dp"
+                android:textColor="@color/black"/>
+        <Button
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:text="1"
+                android:textColor="@color/black"
+                android:id="@+id/one_button" android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+                android:textSize="150dp" android:layout_marginRight="40dp"/>
+        <ImageButton
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="100dp"
+                android:layout_height="55dp"
+                android:id="@+id/erase_button"
+                android:background="@drawable/erase_background"
+                android:layout_below="@+id/one_button"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="44dp"
+                android:layout_marginTop="5dp"/>
+    </RelativeLayout>
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fadeScrollbars="false"
+            android:id="@+id/scrollView"
+            android:layout_above="@+id/relativeLayout"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:fillViewport="true"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false"
+            android:layout_marginTop="10dp">
+        <com.pussy_penetrator.descretemath.zhegalkinpolinomial.PolinomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="(*^‿^*)"
+                android:id="@+id/polinom" android:layout_below="@+id/linearLayout"
+                android:layout_above="@+id/relativeLayout" android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true" android:textSize="80dp"
+                android:singleLine="false" android:textColor="@color/black"
+                android:gravity="center"/>
+    </ScrollView>
+</RelativeLayout>
+

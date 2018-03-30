@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/main_layout"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/background"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/binary_big"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="@string/hint"
+            android:singleLine="false"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/hint_size"/>
+
+        <TextView
+            android:id="@+id/binary_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black"
+            android:textSize="15dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/zero_button"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="20dp"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="75dp"/>
+
+        <Button
+            android:id="@+id/one_button"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="75dp"/>
+
+        <ImageButton
+            android:id="@+id/erase_button"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="56dp"
+            android:layout_height="31dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/one_button"
+            android:layout_marginRight="23dp"
+            android:background="@drawable/erase_background"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="10dp"
+        android:fadeScrollbars="false"
+        android:fillViewport="true">
+
+        <com.pussy_penetrator.descretemath.zhegalkinpolinomial.PolinomTextView
+            android:id="@+id/polinom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/relativeLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/linearLayout"
+            android:gravity="center"
+            android:singleLine="false"
+            android:text="(*^‿^*)"
+            android:textColor="@color/black"
+            android:textSize="80dp"/>
+    </ScrollView>
+</RelativeLayout>
+
